@@ -19,15 +19,12 @@ class ResultViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showEdit", let destVC = segue.destination as? EditViewController{
             destVC.delegate = self
+            destVC.name = nameProfile.text
+            destVC.surname = surnameProfile.text
         }
     }
     @IBAction func editPressed(_ sender: Any) {
-         func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if segue.identifier == "showEdit", let destVC = segue.destination as? EditViewController{
-                nameProfile.text = destVC.nameText.text
-                surnameProfile.text = destVC.nameText.text
-            }
-        }
+    
     }
     
 }

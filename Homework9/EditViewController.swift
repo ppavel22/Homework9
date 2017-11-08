@@ -14,9 +14,16 @@ class EditViewController: UIViewController {
     @IBOutlet weak var surnameText: UITextField!
     @IBOutlet weak var greetingsLabel: UILabel!
     var delegate: EditProfileDelegate?
-    
-    override func viewDidLoad() {
+    var name: String?
+    var surname: String?
+   override func viewDidLoad() {
         super.viewDidLoad()
+    if let name1 = name {
+        nameText.text = name1
+    }
+    if let surname1 = surname {
+        surnameText.text = surname1
+    }
     }
     
     @IBAction func confirmPressed(_ sender: Any) {
